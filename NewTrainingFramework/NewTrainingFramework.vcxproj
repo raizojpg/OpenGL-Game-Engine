@@ -178,14 +178,18 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="MouseEnums.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Shaders.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Resources\Models\Croco.nfg" />
     <None Include="..\Resources\Shaders\LineShaderFS.fs" />
     <None Include="..\Resources\Shaders\LineShaderVS.vs" />
+    <None Include="..\Resources\Shaders\ModelShaderFS.fs" />
+    <None Include="..\Resources\Shaders\ModelShaderVS.vs" />
     <None Include="..\Resources\Shaders\TriangleShaderFS.fs" />
     <None Include="..\Resources\Shaders\TriangleShaderVS.vs" />
     <None Include="..\..\Readme.doc" />
@@ -195,6 +199,12 @@
       <Project>{0d44529e-f7dd-4454-8ead-9afd857f53b4}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NewTrainingFramework.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\Textures\Croco.tga" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

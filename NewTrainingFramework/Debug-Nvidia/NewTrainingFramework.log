@@ -1,3 +1,15 @@
-﻿  LINK : C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\\BIN-Nvidia\NewTrainingFramework.exe not found or not built by the last incremental link; performing full link
-Camera.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  NewTrainingFramework.cpp
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(98,5): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '/NewTrainingFramework.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(113,5): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '/NewTrainingFramework.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(289,36): warning C4305: '-=': truncation from 'double' to 'float'
+  (compiling source file '/NewTrainingFramework.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(290,37): warning C4305: '+=': truncation from 'double' to 'float'
+  (compiling source file '/NewTrainingFramework.cpp')
+  
   NewTrainingFramework.vcxproj -> C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\BIN-Nvidia\NewTrainingFramework.exe
