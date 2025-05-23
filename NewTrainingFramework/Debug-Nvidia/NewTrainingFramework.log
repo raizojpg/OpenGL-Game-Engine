@@ -1,15 +1,26 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   NewTrainingFramework.cpp
-C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(98,5): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(102,5): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   (compiling source file '/NewTrainingFramework.cpp')
   
-C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(113,5): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(117,5): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   (compiling source file '/NewTrainingFramework.cpp')
   
-C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(289,36): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(353,36): warning C4305: '-=': truncation from 'double' to 'float'
   (compiling source file '/NewTrainingFramework.cpp')
   
-C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(290,37): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(354,37): warning C4305: '+=': truncation from 'double' to 'float'
   (compiling source file '/NewTrainingFramework.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\rapidxml-1.13\rapidxml_utils.hpp(40,25): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
+  (compiling source file '/NewTrainingFramework.cpp')
+      C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\rapidxml-1.13\rapidxml_utils.hpp(40,25):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(168,20):
+          see reference to class template instantiation 'rapidxml::file<char>' being compiled
+          C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\rapidxml-1.13\rapidxml_utils.hpp(28,9):
+          while compiling class template member function 'rapidxml::file<char>::file(const char *)'
+              C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\NewTrainingFramework.cpp(168,24):
+              see the first reference to 'rapidxml::file<char>::file' in 'printXML'
   
   NewTrainingFramework.vcxproj -> C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\BIN-Nvidia\NewTrainingFramework.exe

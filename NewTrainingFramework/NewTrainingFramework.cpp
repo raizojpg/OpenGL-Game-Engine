@@ -2,6 +2,8 @@
 //
 
 #include "stdafx.h"
+#include "../rapidxml-1.13/rapidxml.hpp"
+#include "../rapidxml-1.13/rapidxml_utils.hpp"
 #include "../Utilities/utilities.h" // if you use STL, please include this line AFTER all other include
 #include "Vertex.h"
 #include "Shaders.h"
@@ -13,6 +15,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+
 
 #define PI 3.14
 
@@ -66,6 +69,7 @@ std::vector<unsigned short> indicesData;
 //	lineShaders.Init("../Resources/Shaders/LineShaderVS.vs", "../Resources/Shaders/LineShaderFS.fs");
 //	return myShaders.Init("../Resources/Shaders/TriangleShaderVS.vs", "../Resources/Shaders/TriangleShaderFS.fs");
 //}
+
 
 void readNfg(const std::string& filePath, std::vector<Vertex>& vertices, std::vector<unsigned short>& indices) {
 	std::ifstream file(filePath);
@@ -123,8 +127,68 @@ void readNfg(const std::string& filePath, std::vector<Vertex>& vertices, std::ve
 	std::cout << "Loaded " << vertices.size() << " vertices and " << indices.size() << " indices from " << filePath << std::endl;
 }
 
+void parseXmlNode(rapidxml::xml_node<>* node, int depth = 0) {
+	if (!node || std::strlen(node->name()) == 0) {
+		return; 
+	}
+
+	std::string indent(depth * 4, ' ');
+	std::cout << indent << "*NODE: " << node->name();
+
+	rapidxml::xml_attribute<>* attr = node->first_attribute();
+	if (attr) {
+		std::cout << "\t\t has with attributes ";
+		while (attr) {
+			std::cout << attr->name() << "=" << attr->value();
+			attr = attr->next_attribute();
+			if (attr) std::cout << ", ";
+		}
+	}
+	else {
+		std::cout << "\t\t without attributes";
+	}
+	std::cout << std::endl;
+
+	if (node->value() && std::strlen(node->value()) > 0) {
+		std::cout << indent << " -> with content: " << node->value() << std::endl;
+	}
+
+	rapidxml::xml_node<>* child = node->first_node();
+	if (child && std::strlen(child->name()) != 0) {
+		std::cout << indent << " -> with children:" << std::endl;
+		while (child) {
+			parseXmlNode(child, depth + 1);
+			child = child->next_sibling();
+		}
+	}
+}
+
+void printXML() {
+	try {
+		rapidxml::file<> file("../Resources/doc.xml");
+		char* buffer = file.data();
+
+		rapidxml::xml_document<> doc;
+		doc.parse<0>(buffer);
+
+		rapidxml::xml_node<>* root = doc.first_node();
+		if (root) {
+			std::cout << "Root: " << root->name() << std::endl;
+			parseXmlNode(root);
+		}
+		else {
+			std::cerr << "Failed to find root node in XML file." << std::endl;
+		}
+	}
+	catch (const std::exception& e) {
+		std::cerr << "Error parsing XML: " << e.what() << std::endl;
+	}
+}
+
 int Init(ESContext* esContext)
 {
+	printXML();
+
 	glEnable(GL_DEPTH_TEST);
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 

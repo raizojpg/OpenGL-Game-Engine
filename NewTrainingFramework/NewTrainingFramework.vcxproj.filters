@@ -103,4 +103,9 @@
       <Filter>Resources\Textures</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="doc.xml">
+      <Filter>Resources</Filter>
+    </Xml>
+  </ItemGroup>
 </Project>

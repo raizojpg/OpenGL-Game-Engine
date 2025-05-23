@@ -206,6 +206,9 @@
   <ItemGroup>
     <Image Include="..\Resources\Textures\Croco.tga" />
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="doc.xml" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
