@@ -15,6 +15,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include "ResourceManager.h"
 
 
 #define PI 3.14
@@ -187,6 +188,9 @@ void printXML() {
 
 int Init(ESContext* esContext)
 {
+	//ResourceManager::GetInstance()->LoadConfig("config.xml");
+	//Model* model = ResourceManager::GetInstance()->LoadModel(1);
+
 	printXML();
 
 	glEnable(GL_DEPTH_TEST);
