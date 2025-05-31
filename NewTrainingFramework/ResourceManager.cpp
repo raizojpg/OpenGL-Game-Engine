@@ -10,8 +10,9 @@ ResourceManager* ResourceManager::GetInstance() {
     return instance;
 }
 
-void ResourceManager::Init() {
+void ResourceManager::Init(const std::string& filePath) {
     std::cout << "ResourceManager initialized." << std::endl;
+    LoadConfig(filePath);
 }
 
 void ResourceManager::LoadConfig(const std::string& filePath) {

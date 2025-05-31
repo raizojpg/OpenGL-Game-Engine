@@ -2,7 +2,7 @@
 #include "Model.h" 
 
 Model::Model(ModelResource* resource)
-    : mr(resource), vboId(0), iboId(0), wiredIboId(0), nrIndici(0), nrIndiciWired(0) {}
+    : mr(resource), vboId(0), iboId(0), wiredIboId(0), nrIndexes(0), nrIndexesWired(0) {}
 
 Model::~Model() {
     glDeleteBuffers(1, &vboId);
@@ -15,7 +15,7 @@ void Model::Load() {
     std::vector<unsigned short> indices;
     readNfg(mr->path, vertices, indices);
 
-    nrIndici = indices.size();
+    nrIndexes = indices.size();
 
     glGenBuffers(1, &vboId);
     glBindBuffer(GL_ARRAY_BUFFER, vboId);

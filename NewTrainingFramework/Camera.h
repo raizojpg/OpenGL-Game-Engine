@@ -5,6 +5,7 @@
 
 class Camera {
 public:
+    int id;
     Vector3 position;
     Vector3 target;
     Vector3 up;
@@ -38,6 +39,8 @@ public:
     void rotateOz(int sens);
 
     void updateAxes();
+    void updatePerspective();
     void updateWorldView();
     void setDeltaTime(GLfloat dt);
+
 };

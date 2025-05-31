@@ -3,17 +3,17 @@
 #include <cmath>
 
 Camera::Camera()
-    : position(Vector3(0.0f, 0.0f, -1.0f * 500)),
+    : position(Vector3(0.0f, 0.0f, -1.0f)),
     target(Vector3(0.0f, 0.0f, 0.0f)),
     up(Vector3(0.0f, 1.0f, 0.0f)),
-    moveSpeed(0.5f * 100),
-    rotateSpeed(0.5f * 2),
-    nearPlane(0.2f * 1000),
-    farPlane(10.0f * 1000),
+    moveSpeed(0.5f),
+    rotateSpeed(0.5f),
+    nearPlane(0.2f ),
+    farPlane(10.0f),
     fov(45.0f),
     deltaTime(0.0f) {
     float aspect = (float)Globals::screenWidth / Globals::screenHeight;
-    perspectiveMatrix.SetPerspective(fov, aspect, nearPlane, farPlane);
+    perspectiveMatrix.SetPerspective(fov * 3.14 / 180, aspect, nearPlane, farPlane);
     updateWorldView();
 }
 
@@ -24,8 +24,8 @@ Camera::Camera(Vector3& pos, Vector3& tgt, Vector3& u,
     moveSpeed(mSpeed), rotateSpeed(rSpeed),
     nearPlane(nPlane), farPlane(fPlane), fov(f),
     deltaTime(0.0f) {
-    float aspect = Globals::screenWidth/Globals::screenHeight;
-    perspectiveMatrix.SetPerspective(fov, aspect, nearPlane, farPlane);
+    float aspect = (float)Globals::screenWidth/Globals::screenHeight;
+    perspectiveMatrix.SetPerspective(fov*3.14/180, aspect, nearPlane, farPlane);
     updateWorldView();
 }
 
@@ -111,6 +111,11 @@ void Camera::updateWorldView() {
     Matrix R_transpose = R.Transpose();
 
     viewMatrix = T_inv * R_transpose;
+}
+
+void Camera::updatePerspective() {
+    float aspect = (float)Globals::screenWidth / Globals::screenHeight;
+    perspectiveMatrix.SetPerspective(fov * 3.14 / 180, aspect, nearPlane, farPlane);
 }
 
 void Camera::setDeltaTime(GLfloat dt) {

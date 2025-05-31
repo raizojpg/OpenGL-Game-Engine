@@ -15,7 +15,7 @@ class Model {
 public:
     ModelResource* mr;
     GLuint vboId, iboId, wiredIboId;
-    int nrIndici, nrIndiciWired;
+    int nrIndexes, nrIndexesWired;
 
     Model(ModelResource* resource);
     ~Model();

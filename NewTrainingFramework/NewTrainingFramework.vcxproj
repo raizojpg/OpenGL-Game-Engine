@@ -168,6 +168,8 @@
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="NewTrainingFramework.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SceneObject.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Shaders.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -185,6 +187,8 @@
     <ClInclude Include="MouseEnums.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SceneObject.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Shaders.h" />
     <ClInclude Include="stdafx.h" />
@@ -193,6 +197,7 @@
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Resources\Models\Bila.nfg" />
     <None Include="..\Resources\Models\Croco.nfg" />
     <None Include="..\Resources\Shaders\LineShaderFS.fs" />
     <None Include="..\Resources\Shaders\LineShaderVS.vs" />
@@ -212,9 +217,14 @@
     <ResourceCompile Include="NewTrainingFramework.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\Resources\Textures\Bus.tga" />
     <Image Include="..\Resources\Textures\Croco.tga" />
+    <Image Include="..\Resources\Textures\Dirt.tga" />
+    <Image Include="..\Resources\Textures\Rock.tga" />
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="..\Resources\resourceManager.xml" />
+    <Xml Include="..\Resources\sceneManager.xml" />
     <Xml Include="doc.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

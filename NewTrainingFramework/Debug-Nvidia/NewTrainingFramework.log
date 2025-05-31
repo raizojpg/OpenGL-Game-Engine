@@ -1,17 +1,31 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  ResourceManager.cpp
-C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\rapidxml-1.13\rapidxml_utils.hpp(40,25): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
-  (compiling source file '/ResourceManager.cpp')
-      C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\rapidxml-1.13\rapidxml_utils.hpp(40,25):
-      the template instantiation context (the oldest one first) is
-          C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\ResourceManager.cpp(20,26):
-          see reference to class template instantiation 'rapidxml::file<char>' being compiled
-          C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\rapidxml-1.13\rapidxml_utils.hpp(28,9):
-          while compiling class template member function 'rapidxml::file<char>::file(const char *)'
-              C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\ResourceManager.cpp(20,30):
-              see the first reference to 'rapidxml::file<char>::file' in 'ResourceManager::LoadConfig'
+  Camera.cpp
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(16,49): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
   
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  NewTrainingFramework.cpp
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(28,46): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(33,24): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(34,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(39,25): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(40,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(45,25): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(46,23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\Camera.cpp(118,49): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  (compiling source file '/Camera.cpp')
+  
+Camera.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   NewTrainingFramework.vcxproj -> C:\Users\Public\Graphics Programming\proiect_2015\NewTrainingFramework_2015\BIN-Nvidia\NewTrainingFramework.exe

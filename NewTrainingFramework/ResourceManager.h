@@ -27,7 +27,7 @@ private:
 
 public:
     static ResourceManager* GetInstance();
-    void Init();
+    void Init(const std::string& filePath);
 
     void LoadConfig(const std::string& filePath);
     Model* LoadModel(int id);
@@ -35,6 +35,5 @@ public:
     Texture* LoadTexture(int id);
 
     void FreeResources();
-
     ~ResourceManager();
 };
